@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 30px 40px 20px 40px;
+  background-color: rgb(163, 101, 50);
+}
+.brand {
+  color: rgba(97, 27, 27, 0.801);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+.cart-widget {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.562);
+  border: 2px solid rgb(163, 101, 50);
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+.btns-nav {
+  gap: 0.45rem;
+}
+.btn-navbar:hover {
+  background-color: rgba(163, 101, 50, 0.719) !important;
+  color: white;
+  border: 1px solid black;
+}
+.item-list-container {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  padding-top: 20px;
+}
