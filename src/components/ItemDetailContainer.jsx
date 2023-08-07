@@ -1,8 +1,6 @@
-import ItemList from "./ItemList";
-import { useParams } from "react-router-dom";
+import ItemDetail from "./ItemDetail";
 
-const ItemListContainer = () => {
-  const { category } = useParams();
+const ItemDetailContainer = () => {
   const productos = [
     {
       id: 1,
@@ -90,7 +88,7 @@ const ItemListContainer = () => {
     if (productos.lenght > 0) {
       setTimeout(() => {
         res(productos);
-      }, 2000);
+      }, 2500);
     } else {
       rej(new Error("No se han encontrado productos"));
     }
@@ -100,16 +98,11 @@ const ItemListContainer = () => {
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 
-  const filtrandoProductos = productos.filter(
-    (producto) => producto.category === category
-  );
-
   return (
     <>
-      <h1 className="h1-gral">Nuestros productos</h1>
-      <ItemList productos={filtrandoProductos} />;
+      <ItemDetail productos={productos} />;
     </>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

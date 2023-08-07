@@ -10,7 +10,9 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
+import { ArrowDownIcon } from "@chakra-ui/icons";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -18,18 +20,30 @@ const NavBar = () => {
       <Flex>
         <Box>
           {/* NOMBRE A CAMBIAR */}
-          <Heading className="brand">Kousyn Burgers</Heading>
+          <Heading className="brand">
+            <Link to={`/`}>Kousyn</Link>
+          </Heading>
         </Box>
         <Spacer />
         <Box>
           <Menu>
             <MenuButton className="btn-navbar" as={Button}>
               Nuestro menu
+              <ArrowDownIcon />
             </MenuButton>
             <MenuList>
-              <MenuItem>Hamburguesas</MenuItem>
+              {/* <MenuItem>Hamburguesas</MenuItem>
               <MenuItem>Entradas</MenuItem>
-              <MenuItem>Bebidas</MenuItem>
+              <MenuItem>Bebidas</MenuItem> */}
+              <MenuItem>
+                <Link to={`/category/${"Hamburguesas"}`}>Hamburguesas</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={`/category/${"Entradas"}`}>Entradas</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={`/category/${"Bebidas"}`}>Bebidas</Link>
+              </MenuItem>
             </MenuList>
           </Menu>
         </Box>

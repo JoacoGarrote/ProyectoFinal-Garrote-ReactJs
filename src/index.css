@@ -35,3 +35,34 @@
   font-size: 2rem;
   padding-top: 20px;
 }
+
+/* HOME */
+.home {
+  background-color: antiquewhite;
+  padding: 10rem;
+  text-align: center;
+}
+.h1-gral {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ITEM COUNTER */
+.itemCount {
+  display: flex;
+  gap: 30px;
+  margin-left: 3rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 0.45rem;
+}
+.btn-itemCount:hover {
+  color: rgba(163, 101, 50, 0.719);
+}
+
+/* CARDS */
+.card-productos {
+  background-color: wheat !important;
+}
