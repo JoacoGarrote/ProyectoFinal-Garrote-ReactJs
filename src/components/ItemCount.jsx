@@ -1,25 +1,18 @@
-import { useState } from "react";
-
-const ItemCount = () => {
-  // Funciones de suma y resta //
-  const [numero, setNumero] = useState(0);
-  const sumar = () => {
-    setNumero(numero + 1);
-  };
-  const restar = () => {
-    setNumero(numero - 1);
-  };
-  // //
+const ItemCount = ({ qty, restar, sumar }) => {
   return (
-    <div className="itemCount">
-      <button className="btn-itemCount" onClick={restar}>
-        Quitar
-      </button>
-      <h3>{numero}</h3>
-      <button className="btn-itemCount" onClick={sumar}>
-        Añadir
-      </button>
-    </div>
+    <>
+      <div className="container item-count-container">
+        <div className="item-count">
+          <button className="btn-itemCount btn-menos" onClick={restar}>
+            -
+          </button>
+          <h3 className="qty-number">{qty}</h3>
+          <button className="btn-itemCount btn-mas" onClick={sumar}>
+            +
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

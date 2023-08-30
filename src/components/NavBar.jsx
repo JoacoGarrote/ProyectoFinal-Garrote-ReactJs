@@ -1,63 +1,39 @@
-import {
-  Flex,
-  Box,
-  Spacer,
-  Heading,
-  Button,
-  ButtonGroup,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from "@chakra-ui/react";
-import { ArrowDownIcon } from "@chakra-ui/icons";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <Flex>
-        <Box>
-          {/* NOMBRE A CAMBIAR */}
-          <Heading className="brand">
-            <Link to={`/`}>Kousyn</Link>
-          </Heading>
-        </Box>
-        <Spacer />
-        <Box>
-          <Menu>
-            <MenuButton className="btn-navbar" as={Button}>
-              Nuestro menu
-              <ArrowDownIcon />
-            </MenuButton>
-            <MenuList>
-              {/* <MenuItem>Hamburguesas</MenuItem>
-              <MenuItem>Entradas</MenuItem>
-              <MenuItem>Bebidas</MenuItem> */}
-              <MenuItem>
-                <Link to={`/category/${"Hamburguesas"}`}>Hamburguesas</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to={`/category/${"Entradas"}`}>Entradas</Link>
-              </MenuItem>
-              <MenuItem>
-                <Link to={`/category/${"Bebidas"}`}>Bebidas</Link>
-              </MenuItem>
-            </MenuList>
-          </Menu>
-        </Box>
-        <Spacer />
-        <Box>
-          <ButtonGroup className="btns-nav">
-            <Button className="btn-navbar">Take Away</Button>
-            <Button className="btn-navbar">Sobre nosotros</Button>
-          </ButtonGroup>
-        </Box>
-        <Spacer />
-        <CartWidget />
-      </Flex>
-    </div>
+    <header>
+      <nav className="navbar">
+        <Link to="/" className="logo">
+          <img
+            className="brand-img"
+            src="/images/kousynlogoblanco.png"
+            alt="Logotipo de la tienda, Kousyn Burgers"
+          />
+        </Link>
+        <ul className="navbar-productos">
+          <li className="link-navbar">
+            <Link to={`/category/${"Hamburguesas"}`}>Hamburguesas</Link>
+          </li>
+          <li className="link-navbar">
+            <Link to={`/category/${"Entradas"}`}>Entradas</Link>
+          </li>
+          <li className="link-navbar">
+            <Link to={`/category/${"Bebidas"}`}>Bebidas</Link>
+          </li>
+        </ul>
+        <ul className="navbar-about">
+          <li className="link-navbar">Sobre nosotros</li>
+          <li className="link-navbar">Take away</li>
+        </ul>
+        <ul>
+          <li className="navbar-cart">
+            <CartWidget />
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

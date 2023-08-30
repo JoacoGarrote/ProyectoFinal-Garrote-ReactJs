@@ -1,16 +1,20 @@
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Flex, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { useContext } from "react";
 
 const CartWidget = () => {
+  const { qtyCart } = useContext(ShoppingCartContext);
   return (
-    <Flex className="cart-widget">
-      <Box>
-        <p>3</p>
-      </Box>
-      <Box>
-        <AiOutlineShoppingCart />
-      </Box>
-    </Flex>
+    <div className="cart-widget">
+      <Link to="/cart">
+        <div className="cw-img">
+          <img src="/images/shopping-cart.png" alt="Carrito de compras" />
+        </div>
+        <div className="cw-number">
+          <span>{qtyCart()}</span>
+        </div>
+      </Link>
+    </div>
   );
 };
 
