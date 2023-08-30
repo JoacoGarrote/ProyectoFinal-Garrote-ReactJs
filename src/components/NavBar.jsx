@@ -24,8 +24,12 @@ const NavBar = () => {
           </li>
         </ul>
         <ul className="navbar-about">
-          <li className="link-navbar">Sobre nosotros</li>
-          <li className="link-navbar">Take away</li>
+          <li className="link-navbar">
+            <Link to={`/sobrenosotros`}>Sobre nosotros</Link>
+          </li>
+          <li className="link-navbar">
+            <Link to={`/takeaway`}>Take away</Link>
+          </li>
         </ul>
         <ul>
           <li className="navbar-cart">

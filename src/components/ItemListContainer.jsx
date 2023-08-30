@@ -1,10 +1,20 @@
 import { useState, useEffect } from "react";
+import Loader from "./Loader";
+import Footer from "./Footer";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "../firebase/data";
 
 const ItemListContainer = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1800);
+  }, []);
+
   const [productos, setProductos] = useState([]);
 
   const category = useParams().category;
@@ -26,7 +36,16 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <ItemList productos={productos} />;
+      <div>
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className="bg">
+            <ItemList productos={productos} />;
+          </div>
+        )}
+      </div>
+      <Footer />
     </>
   );
 };

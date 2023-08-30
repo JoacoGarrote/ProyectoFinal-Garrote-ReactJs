@@ -26,7 +26,7 @@ const ItemDetail = ({ productos }) => {
 
   return (
     <>
-      <div>
+      <section className="section-detail bg">
         {loading ? (
           <Loader />
         ) : (
@@ -40,7 +40,7 @@ const ItemDetail = ({ productos }) => {
               <div className="info-detail">
                 <h3 className="name-detail">{productos.name}</h3>
                 <p className="description-detail">{productos.description}</p>
-                <p className="price-detail">${productos.price}</p>
+                <p className="price-detail">Precio: ${productos.price}</p>
               </div>
               <div className="btn-add-div">
                 <button
@@ -58,8 +58,7 @@ const ItemDetail = ({ productos }) => {
             </div>
           </div>
         )}
-      </div>
-      {/* <h1 className="h1-gral">Detalle del producto:</h1> */}
+      </section>
     </>
   );
 };

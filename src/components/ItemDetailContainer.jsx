@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Footer from "./Footer";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../firebase/data";
@@ -15,7 +16,11 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  return <div>{productos && <ItemDetail productos={productos} />}</div>;
+  return (
+    <>
+      <div>{productos && <ItemDetail productos={productos} />}</div> <Footer />
+    </>
+  );
 };
 
 export default ItemDetailContainer;
