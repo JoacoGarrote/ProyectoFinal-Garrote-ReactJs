@@ -9,4 +9,12 @@ En su inicio el proyecto fue realizado con Chakra UI, sin embargo decidí desins
 Dejo aquí una vista rápida de la página web:
 
 ## Vista del sitio web :
-![rec-screen](https://github.com/JoacoGarrote/PreEntrega1-Garrote-ReactJs/assets/117954164/fd2ea8f1-9d9a-4517-b227-738f60637b44)
+[screen-capture.webm](https://github.com/JoacoGarrote/ProyectoFinal-Garrote-ReactJs/assets/117954164/192de725-caa3-42c1-bca1-ffe90e6c67a5)
+
+## Vista del firebase:
+![firebase](https://github.com/JoacoGarrote/ProyectoFinal-Garrote-ReactJs/assets/117954164/35c611d0-5a9f-43b4-8330-6db79bf58ca5)
+
+PD: No es el resultado del video anterior, ya que se tuvo que recortar el tiempo de grabación del video del sitio. Sin embargo, funciona correctamente la subida de datos.
+
+## Agradecimientos:
+Quiero agradecer enormemente a mi profesor Omar Manías por su dedicación, vocación y paciencia a lo largo del curso; al igual que mi tutor Matias. Y a todos mis compañeros por la excelente cursada que tuve.
